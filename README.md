@@ -8,7 +8,7 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "railsfooter", github "emory-libraries/rails-footer"
+gem "railsfooter", github: "emory-libraries/rails-footer"
 ```
 
 And then execute:
