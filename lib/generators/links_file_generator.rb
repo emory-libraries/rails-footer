@@ -1,0 +1,26 @@
+class LinksFileGenerator < Rails::Generators::Base
+  def create_links_file
+    create_file "app/views/railsfooter/_footer_links.html.erb", <<~RUBY
+      <div class="footer-list" style="grid-column: 1;">
+        <ul>
+        <li><%= link_to "test", root_path %></li>
+        </ul>
+      </div>
+      <div class="footer-list" style="grid-column: 2;">
+        <ul>
+         <li><%= link_to "test", root_path %></li>
+        </ul>
+      </div>
+      <div class="footer-list" style="grid-column: 4;">
+        <ul>
+          <li><%= link_to "test", root_path %></li>
+        </ul>
+      </div>
+      <div class="footer-list" style="grid-column: 5;">
+        <ul>
+          <li><%= link_to "test", root_path %></li>
+        </ul>
+      </div>
+    RUBY
+  end
+end
