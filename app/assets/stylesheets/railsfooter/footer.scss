@@ -1,4 +1,4 @@
-@use 'colors.scss';
+@use "colors.scss";
 
 #emory-footer {
   footer {
@@ -48,7 +48,7 @@
   
   ul {
     list-style-type: none; 
-    font-family: 'Open Sans', sans-serif; 
+    font-family: "Open Sans", sans-serif; 
     font-size:0.8125rem;
     padding: 0;
   }
@@ -85,17 +85,17 @@
     grid-row: 2;
   }
   div.footer-version {
-    margin-top: 3.125rem;
+    margin: 3.125rem auto 0;
     grid-row: 2;
     grid-column: 1 / span 5;
-    font-family: 'Open Sans', sans-serif; 
+    font-family: "Open Sans", sans-serif; 
     font-size:0.8125rem;
     p {
       margin-bottom: 0.2rem;
     }
   }
   div.footer-copyright {
-    font-family: 'Open Sans', sans-serif; 
+    font-family: "Open Sans", sans-serif; 
     font-size:0.8125rem; 
     grid-row: 3; 
     grid-column: 1 / span 5;
