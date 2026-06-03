@@ -23,4 +23,7 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_dependency "rails", ">= 5.0"
+
+  spec.executables = ["railsfooter_setup"]
+
 end
