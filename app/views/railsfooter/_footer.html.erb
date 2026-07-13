@@ -1,5 +1,5 @@
 <section id="emory-footer">
-<footer>
+  <footer>
     <div>
       <a class="logo-badge" target="_blank" rel="noopener noreferrer" href="https://libraries.emory.edu">
         <div class="logo">
@@ -42,15 +42,21 @@
         </div>
       </a>
     </div>
-      <%= render "railsfooter/footer_links" %>
+
+    <%= render "railsfooter/footer_links" %>
+    
     <div class="footer-version text-center">
       <span class="version-label">Version <span class="version-info" title="<%= GIT_SHA %>"><%= BRANCH %> updated <%= LAST_DEPLOYED %></span>
     </div>
+    
     <div class="footer-copyright">
-      <span class="copyright-signature">Copyright &copy <%= Date.today.year %> Emory University All Rights Reserved.
-      <a class="copyright-policy" target="_blank" rel="noopener noreferrer" href="https://libraries.emory.edu/about/policies/privacy-policy.html"> Privacy Policy </a>
-      <a style="margin-right: 10px;" target="_blank" rel="noopener noreferrer" href="http://www.emory.edu/home/about-this-site/copyright.html" class="copyright-policy"> Copyright Statement </a>
-        201 Dowman Drive, Atlanta, Georgia 30322 | 404.727.6123 </span>
-    </div>
-</footer>
+      <div class="copyright-signature">
+        <span>Copyright &copy 2026 Emory University,</span>
+        <span>All Rights Reserved.</span>
+        <a class="copyright-policy" target="_blank" rel="noopener noreferrer" href="http://www.emory.edu/home/about-this-site/copyright.html">Copyright Statement</a>
+        <a class="privacy-policy" target="_blank" rel="noopener noreferrer" href="https://libraries.emory.edu/about/policies/privacy-policy.html">Privacy Policy</a>
+        <span>201 Dowman Drive, Atlanta, Georgia 30322.</span>
+        <span>404.727.6123</span>
+      </div></div>
+  </footer>
 </section
