@@ -24,6 +24,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "rails", ">= 5.0"
 
-  spec.executables = ["railsfooter_setup"]
-
+  spec.executables = [ "railsfooter_setup" ]
 end
