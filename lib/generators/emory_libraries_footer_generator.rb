@@ -21,4 +21,3 @@ class EmoryLibrariesFooterGenerator < Rails::Generators::Base
     copy_file "footer_has_links_spec.rb", "spec/features/footer_has_links_spec.rb"
   end
 end
-
