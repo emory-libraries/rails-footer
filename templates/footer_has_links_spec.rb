@@ -1,20 +1,32 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.describe 'getting links in the footer', type: :feature do
+# RSpec.describe 'getting links in the footer', type: :feature do
+RSpec.describe "visit page, there's a footer", type: :feature do
 
-# is the footer placed?
-  scenario 'footer exists' do
-    visit any_path
-
-# are the styles applied?
-
-
-# are the link lists available
-  scenario 'footer has links' do
+  # is the footer placed?
+  it 'has a footer' do
     visit root_path
-    expect(page).to have_selector("div.footer-list")
+    expect(page).to have_selector("#emory-footer")
   end
 
-#do the links look how they're supposed to?
+  # and are the links in place?
+  it 'footer has links' do
+    visit root_path
+    expect(page).to have_selector(".footer-list")
+  end
+end
 
+# test that the version line is pulling variables
+RSpec.describe "version is displaying correctly", type: :feature do
+
+  it "shows the version information in the footer" do
+
+    stub_const("BRANCH", "branchy-mcversionface")
+    stub_const("LAST_DEPLOYED", "when it is a damp drizzly november in my soul")
+
+    visit root_path
+    expect(page.find('#emory-footer')).to have_content("Version branchy-mcversionface updated when it is a damp drizzly november in my soul")
+
+  end
 end
