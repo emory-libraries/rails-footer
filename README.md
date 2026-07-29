@@ -31,7 +31,7 @@ In cli:
 ```bash
 rails g emory_libraries_footer
 ```
- will copy over a blank/test template footer_links partial. Fill in the blanks and duplicate the <li> lines to build the footer menus.
+ will copy over a blank/test template footer_links partial. Fill in the blanks and duplicate the `<li>` lines to build the footer menus.
 
 For an app with a docker container (like dlp-curate), might need to `docker compose down -v` and `docker compose up` again after install in order for it to recognize the app path. 
 
