@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.authors     = [ "cb987" ]
   spec.email       = [ "cbarto8@emory.edu" ]
   spec.homepage    = "https://github.com/emory-libraries/rails-footer"
-  spec.summary     = ""
-  spec.description = ""
+  spec.summary     = "Emory University Libraries footer for Rails"
+  spec.description = "Adds official Emory University Libraries footer in-house Rails applications"
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
