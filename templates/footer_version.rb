@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-# CONGRATS! you got this file as part of the emory/EULM footer gem package. it's supposed to be here! If you want to make changes to the file, I recommend renaming it so that it doesn't get accidentally rewritten with gem updates.
+# CONGRATS! you got this file as part of the emory/EULM footer gem package. it's supposed to be here!
+# If you want to make changes to the file, make sure to also rename it so that it doesn't get accidentally rewritten with gem updates.
 
 # if you can figure out the path to the revision log from where the app is running...
 # REVISIONS_LOGFILE = Rails.root.join("../../revisions.log")
