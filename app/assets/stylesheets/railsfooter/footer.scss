@@ -92,7 +92,7 @@
       margin-bottom: 1.5625rem;
     }
   }
-  .copyright-policy, .privacy-policy, .copyright-signature, span {
+  .copyright-policy, .privacy-policy, .copyright-signature, span:not(.version-info) {
     margin: auto 0.15rem;
   }
   .copyright-policy, .privacy-policy {
