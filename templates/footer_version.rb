@@ -26,7 +26,7 @@ BRANCH =
     `git rev-parse --abbrev-ref HEAD`.chomp
   else
     # trying `pwd` here might give you a clue for the revisions.log path in a deployed env.
-     `pwd`
+    `pwd`
   end
 
 LAST_DEPLOYED =
