@@ -15,9 +15,15 @@ class EmoryLibrariesFooterGenerator < Rails::Generators::Base
     end
   end
 
+  # writing over the version definition file
+  def write_version_line_values_file
+    # copy over the version file. will overwrite an existing file of the same name.
+    copy_file "footer_version.rb", "config/initializers/footer_version.rb"
+  end
+
   # giving them a lovely test for their test suite
   def write_spec_file
-    # copy over a test file. will use copy_file? to write/overwrite an existing test file. can instruct to rename the test if they edit?
+    # copy over a test file. copy_file will overwrite an existing file of the same name.
     copy_file "footer_gem_test_spec.rb", "spec/features/footer_gem_test_spec.rb"
   end
 end
