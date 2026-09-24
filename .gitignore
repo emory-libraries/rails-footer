@@ -1,5 +1,6 @@
 /.bundle/
 /doc/
+*.gem
 /log/*.log
 /pkg/
 /tmp/
