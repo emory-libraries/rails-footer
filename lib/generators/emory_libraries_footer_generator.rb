@@ -5,10 +5,10 @@ class EmoryLibrariesFooterGenerator < Rails::Generators::Base
   # giving them a links file
   def write_links_file
     # where to look for it?
-    host_file = File.join(destination_root, "app/views/railsfooter/_footer_links.html.erb")
+    host_links_file = File.join(destination_root, "app/views/railsfooter/_footer_links.html.erb")
 
     # IF they don't already have the links file, copy over a blank one.
-    if File.exist?(host_file)
+    if File.exist?(host_links_file)
       puts "awesome, you already have your links file"
     else
       copy_file "_footer_links.html.erb", "app/views/railsfooter/_footer_links.html.erb"
@@ -17,8 +17,13 @@ class EmoryLibrariesFooterGenerator < Rails::Generators::Base
 
   # writing over the version definition file
   def write_version_line_values_file
-    # copy over the version file. will overwrite an existing file of the same name.
-    copy_file "footer_version.rb", "config/initializers/footer_version.rb"
+    host_version_file = File.join(destination_root, "config/initializers/footer_version.rb")
+    # if they already have the version file, decent chance it's been modified, so, not going to overwrite.
+    if File.exist?(host_version_file)
+      puts "awesome, you already have the version file so not going to overwrite it."
+    else
+      copy_file "footer_version.rb", "config/initializers/footer_version.rb"
+    end
   end
 
   # giving them a lovely test for their test suite
