@@ -22,7 +22,12 @@ class EmoryLibrariesFooterGenerator < Rails::Generators::Base
     if File.exist?(host_version_file)
       puts "awesome, you already have the version file so not going to overwrite it."
     else
+<<<<<<< Updated upstream
     copy_file "footer_version.rb", "config/initializers/footer_version.rb"
+=======
+      copy_file "footer_version.rb", "config/initializers/footer_version.rb"
+    end
+>>>>>>> Stashed changes
   end
 
   # giving them a lovely test for their test suite
