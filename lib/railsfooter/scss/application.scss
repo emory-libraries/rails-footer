@@ -9,4 +9,6 @@
 // 3. Your partials LAST, so they can use Bootstrap's variables and mixins,
 //    and so your rules come after Bootstrap's in the final CSS and win ties.
 @import "colors.scss";
+@import "fonts.scss";
 @import "footer.scss";
+@import "header.scss";

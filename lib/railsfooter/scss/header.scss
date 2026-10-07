@@ -1,0 +1,105 @@
+@import "colors.scss";
+@import "fonts.scss";
+
+header.emory-libraries-header {
+  nav.top-nav {
+    border-bottom: 1px solid $base-slate;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.8625rem;
+    div.collapse {
+          justify-content: space-between;
+        }
+    ul {
+      display: flex;
+      margin-block: 0.5rem;
+      padding-inline: 2rem;
+      :not(:last-child)::after {
+        content: "|";
+        color: $light-slate;
+        padding-inline: .25rem;
+      }
+    }
+    a {
+      color: $dark-blue;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    ul.top-nav-right {
+      margin-right: 1rem;
+    }
+    button.navbar-toggler {
+      color: $dark-blue;
+      border: none;
+    }
+  }
+  div.shield-branding {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    margin-inline: 2rem;
+    div.emory-shield-logo {
+      margin-bottom: -2rem;
+      padding-right: 1rem;
+      z-index: 3;
+    }
+    div.logo-words {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      span.EUni {
+        text-transform: uppercase;
+        font-size: 1.125rem;
+        color: $scepter-gold;
+      }
+      span.ELib {
+        color: $dark-blue;
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) { /* Phone/Tablet Screen */
+  header.emory-libraries-header {
+    div.mobile-flip {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      nav.top-nav {
+        border-bottom: none;
+        margin-inline: 1rem;
+      }
+      div.shield-branding {
+        margin-top: .5rem;
+        margin-inline: 1rem;
+        div.emory-shield-logo {
+          margin-bottom: -1rem;
+          padding-right: .5rem;
+          svg {
+            height: 4rem;
+            width: auto;
+          }
+        }
+        div.logo-words {
+          span.EUni {
+            font-size: .875rem;
+          }
+          span.ELib {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  header.emory-libraries-header {
+
+  }
+}
