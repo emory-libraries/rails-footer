@@ -10,11 +10,12 @@ load "rails/tasks/engine.rake"
 GEM_ROOT = File.expand_path(__dir__)
 
 namespace :css do
-  desc "compile application.scss, with bootstrap, into railsfooter.css"
+  desc "compile application.scss, with bootstrap, into railsfooter.css, and footer.scss singly into dist/footer.css"
   task :build do
 
     bootstrap_dir = Gem::Specification.find_by_name("bootstrap").gem_dir # ask gemcoop where the bootstrap gem is installed, without loading it. sits inside the task so it only runs at css:build, not every time rake loads.
 
+    # 1. full stylesheet that ships with gem
     result = Sass.compile(
       "lib/railsfooter/scss/application.scss", # the entry point
       load_paths: [File.join(bootstrap_dir, "assets", "stylesheets")], # where `@import "bootstrap"` is found
@@ -23,6 +24,16 @@ namespace :css do
       silence_deprecations: %w[import] # silencing Bootstrap 5.3 deprecation warnings about @import.
       )
     File.write("app/assets/stylesheets/railsfooter/railsfooter.css", result.css)
+
+    # 2. footer only stylesheet, used just for vendor exprot. no bootstrap load_paths on purpose: if footer.scss ever tries to @import bootstrap, this compile will fail loudly instead of quietly pulliing all of bootstrap into the vendor file.
+    FileUtils.mkdir_p("dist")
+    footer = Sass.compile(
+      "lib/railsfooter/scss/footer.scss",
+      style: :compressed,
+      silence_deprecations: %w[import]
+    )
+    File.write("dist/footer.css", footer.css)
+
   end
 end
 
@@ -38,7 +49,7 @@ namespace :footer do
     require File.join(GEM_ROOT, "test/dummy/config/environment")
 
     css = File.read(
-      File.join(GEM_ROOT, "app/assets/stylesheets/railsfooter/railsfooter.css")
+      File.join(GEM_ROOT, "dist/footer.css")
     )
 
     # ActionController::Base avoids depending on the dummy's own controllers

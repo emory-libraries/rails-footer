@@ -1,0 +1,29 @@
+name: Export html footer
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:  # lets you re-run it manually
+
+permissions:
+  contents: write   # needed to attach files to a release
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true # reads .ruby-version
+
+      - run: bundle exec rake footer:export
+
+      - name: Attach footer.html to the Github release
+        if: github.ref_type == 'tag'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1 \
+            || gh release create "$GITHUB_REF_NAME" --generate-notes
+          gh release upload "$GITHUB_REF_NAME" dist/footer.html --clobber
