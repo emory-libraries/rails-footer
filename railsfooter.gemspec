@@ -23,4 +23,6 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_dependency "rails", ">= 5.0"
+  # "development" dependencies are only installed for people working ON the gem, never for apps that merely USE railsfooter.
+  spec.add_development_dependency "sass-embedded"
 end
