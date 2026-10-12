@@ -1,4 +1,5 @@
 /.bundle/
+dist/
 /doc/
 *.gem
 /log/*.log
