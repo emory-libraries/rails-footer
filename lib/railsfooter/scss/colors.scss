@@ -22,66 +22,24 @@ $orange:  #AB750C;
 $yellow:  #F6E4C1;
 $green:   #28A745;
 
-// colors from brand.emory.edu (University) revamp 2025
-  // primary palette
-$emory-blue: #002F6C; //closest to our base-blue
-$emory-yellow: #F2A900;
-$dogwood-white: #F6F6F6;
-$waterhub-blue: #0033A0;
-  // secondary palette
-$eagle-blue: #0C2340;
-$scepter-gold: #B58500;
-$candler-lake: #007DBA;
-$wise-heart: #D14124;
-$lullwater: #00482B;
-$dusk: #535486;
-$marble: #E9CDD0;
-$wisteria: #C8B8F1;
-$spring: #ECDD31;
-$oxford-farm: #778921;
-  //neutrals palette
-$emory-blue-10: #E4E7EF;
-$emory-yellow-10: #FEF6E6;
-$waterhub-blue-10: #E7E7F5;
-
-
-
-
-// $colors: ();
-// // stylelint-disable-next-line scss/dollar-variable-default
-// $colors: map-merge(
-//   (
-//     "dark-blue":  $dark-blue,
-//     "mid-blue":   $mid-blue,
-//     "blue":       $base-blue,
-//     "gold":       $gold,
-//     "red":        $red,
-//     "orange":     $orange,
-//     "yellow":     $yellow,
-//     "green":      $green,
-//     "white":      $white,
-//     "black":      $black
-//   ),
-//   $colors
-// );
-// $primary:       $bright-blue;
-// $secondary:     $charcoal;
-// $success:       $green;
-// $info:          $light-blue;
-// $warning:       $yellow;
-// $danger:        $red;
-// $theme-colors: ();
-// stylelint-disable-next-line scss/dollar-variable-default
-// $theme-colors: map-merge(
-//   (
-//     "primary":    $primary,
-//     "secondary":  $secondary,
-//     "success":    $success,
-//     "info":       $info,
-//     "warning":    $warning,
-//     "danger":     $danger
-//   ),
-//   $theme-colors
-// );
-// static colors
-// $explorer-box-shadow:       rgba(231, 234, 241, 0.3);
+//  Emory University new brand guidline colors (as of 2026)
+// primary palette
+$emory-blue: #002f6c;
+$emory-yellow: #f2a900;
+$dogwood-white: #f6f6f6;
+$waterhub-blue: #0033a0;
+//  secondary palette
+$eagle-blue: #0c2640;
+$scepter-gold: #b58500;
+$candler-lake-blue: #007dba;
+$wise-heart-red: #d14124;
+$lullwater-green: #00482b;
+$dusk-plum: #535486;
+$marble-pink: #e9cdd0;
+$wisteria-lavender: #c8b8f1;
+$spring-yellow: #ecdd31;
+$oxford-farm-green: #778921;
+//  neutrals
+$emory-blue-10: #e4e7ef;
+$emory-yellow-10: #fef6e6;
+$waterhub-blue-10: #e7e7f5;

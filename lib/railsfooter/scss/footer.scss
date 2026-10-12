@@ -106,7 +106,7 @@
 /**** responsive ****/
 
 @media (max-width: 767px) {  /* phone/tablet screen */
-  #emory-footer footer {
+  .emory-footer footer {
     display: flex;
     flex-direction: column;
     padding-bottom: 1rem;
@@ -126,7 +126,7 @@
 }
 
 @media (max-width: 999px) { /*  */
-   #emory-footer > footer {
+   .emory-footer > footer {
     > div.footer-copyright > div.copyright-signature {
       margin: 0 1rem;
       .copyright-policy, .privacy-policy {
