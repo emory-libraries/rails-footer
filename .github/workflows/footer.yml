@@ -2,6 +2,7 @@ name: Export html footer
 
 on:
   push:
+    branches: "gimme-html" # temporary: for testing
     tags: ["v*"]
   workflow_dispatch:  # lets you re-run it manually
 
