@@ -1,6 +1,6 @@
 @import "colors.scss";
 
-#emory-footer footer {
+.emory-footer footer {
   display: grid; 
   background-color: $dark-blue;
   color: $light-blue;
@@ -50,7 +50,7 @@
   }
 
   /* menu list columns */
-  div.footer-list {
+  .footer-list {
     grid-row: 1;
     display:flex; 
     justify-content: space-around;
@@ -105,7 +105,7 @@
 /**** responsive ****/
 
 @media (max-width: 767px) {  /* phone/tablet screen */
-  #emory-footer footer {
+  .emory-footer footer {
     display: flex;
     flex-direction: column;
     padding-bottom: 1rem;
@@ -125,7 +125,7 @@
 }
 
 @media (max-width: 999px) { /*  */
-   #emory-footer > footer {
+   .emory-footer > footer {
     > div.footer-copyright > div.copyright-signature {
       margin: 0 1rem;
       .copyright-policy, .privacy-policy {
