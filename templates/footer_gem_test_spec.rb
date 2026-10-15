@@ -6,7 +6,7 @@ RSpec.describe "visit page, there's a footer", type: :feature do
   # is the footer placed?
   it 'has a footer' do
     visit root_path
-    expect(page).to have_selector("#emory-footer")
+    expect(page).to have_selector(".emory-footer")
   end
 
   # and are the links in place?
@@ -23,6 +23,6 @@ RSpec.describe "version is displaying correctly", type: :feature do
     stub_const("LAST_DEPLOYED", "when it is a damp drizzly november in my soul")
 
     visit root_path
-    expect(page.find('#emory-footer')).to have_content("Version branchy-mcversionface updated when it is a damp drizzly november in my soul")
+    expect(page.find('.emory-footer')).to have_content("Version branchy-mcversionface updated when it is a damp drizzly november in my soul")
   end
 end

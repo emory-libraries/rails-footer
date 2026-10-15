@@ -1,4 +1,4 @@
-source "https://gems.coop"
+source "https://gem.coop"
 
 # Specify your gem's dependencies in railsfooter.gemspec.
 gemspec
