@@ -2,7 +2,6 @@ name: Export html footer
 
 on:
   push:
-    branches: "gimme-html" # temporary: for testing
     tags: ["v*"]
   workflow_dispatch:  # lets you re-run it manually
 
@@ -12,8 +11,11 @@ permissions:
 jobs:
   export:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4can you
+        with:
+          persist-credentials: false
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true # reads .ruby-version
@@ -24,6 +26,7 @@ jobs:
         if: github.ref_type == 'tag'
         env:
           GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
         run: |
           gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1 \
             || gh release create "$GITHUB_REF_NAME" --generate-notes

@@ -1,4 +1,4 @@
-<section class="emory-footer RF<%= Railsfooter::VERSION %>">
+<section class="emory-footer" data-version="RF<%= Railsfooter::VERSION %>">
   <footer>
     <div>
       <a class="logo-badge" target="_blank" rel="noopener noreferrer" href="https://libraries.emory.edu">
@@ -51,7 +51,7 @@
 
     <div class="footer-copyright">
       <div class="copyright-signature">
-        <span>Copyright &copy <%= Date.today.year %> Emory University,</span>
+        <span>Copyright &copy; <%= Date.current.year %> Emory University,</span>
         <span>All Rights Reserved.</span>
         <a class="copyright-policy" target="_blank" rel="noopener noreferrer" href="http://www.emory.edu/home/about-this-site/copyright.html">Copyright Statement</a>
         <a class="privacy-policy" target="_blank" rel="noopener noreferrer" href="https://libraries.emory.edu/about/policies/privacy-policy.html">Privacy Policy</a>
