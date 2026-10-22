@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-# CONGRATS! you got this file as part of the emory/EULM footer gem package. it's supposed to be here!
-# If you want to make changes to the file, make sure to also rename it so that it doesn't get accidentally rewritten with gem updates.
+# CONGRATS! you got this file as part of the Emory/EULM footer gem package. it's supposed to be here!
+# If you make changes to the file, make sure to also rename it so that it doesn't get accidentally rewritten with gem updates.
 
 # if you can figure out the path to the revision log from where the app is running...
 # REVISIONS_LOGFILE = Rails.root.join("/opt", "#{ENV['PROJECT_NAME']}", "revisions.log")
@@ -26,7 +26,7 @@ BRANCH =
     `git rev-parse --abbrev-ref HEAD`.chomp
   else
     # trying `pwd` here might give you a clue for the revisions.log path in a deployed env.
-    `pwd`
+    Railsfooter::VERSION
   end
 
 LAST_DEPLOYED =
@@ -36,5 +36,5 @@ LAST_DEPLOYED =
   elsif File.exist?(GIT_LOGFILE)
    `git log -1 --format=%cd --date=short`.chomp
   else
-    "nonlinearly"
+    Date.current.year
   end
