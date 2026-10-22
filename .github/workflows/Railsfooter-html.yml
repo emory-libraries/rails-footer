@@ -2,6 +2,7 @@ name: Export html footer
 
 on:
   push:
+    branches: ["html-writer"]
     tags: ["v*"]
   workflow_dispatch:  # lets you re-run it manually
 
