@@ -26,7 +26,7 @@ BRANCH =
     `git rev-parse --abbrev-ref HEAD`.chomp
   else
     # trying `pwd` here might give you a clue for the revisions.log path in a deployed env.
-    `pwd`
+    `current`
   end
 
 LAST_DEPLOYED =
@@ -36,5 +36,5 @@ LAST_DEPLOYED =
   elsif File.exist?(GIT_LOGFILE)
    `git log -1 --format=%cd --date=short`.chomp
   else
-    "nonlinearly"
+    Time.now.year
   end
