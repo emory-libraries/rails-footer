@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4can you
+      - uses: actions/checkout@v4
         with:
           persist-credentials: false
       - uses: ruby/setup-ruby@v1
