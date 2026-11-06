@@ -25,4 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rails", ">= 6.1" #6.1 bc i know it works on dlp-curate, but can't for sure say it works for earlier than that, though it might. try and remember to update if i test on anything earlier.
   # "development" dependencies are only installed for people working ON the gem, never for apps that merely USE railsfooter.
   spec.add_development_dependency "sass-embedded"
+  # spec.add_development_dependency 'bootstrap', '~> 5.3'
 end

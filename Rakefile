@@ -7,6 +7,7 @@ load "rails/tasks/engine.rake"
 GEM_ROOT = File.expand_path(__dir__)
 
 namespace :css do
+
   desc "compile footer.scss singly into dist/footer.css for vendor export"
   task :footer do
     require "sass-embedded"  # the compiler; gives us Sass.compile
@@ -20,9 +21,11 @@ namespace :css do
   task build: :footer do
     require "sass-embedded"  # the compiler; gives us Sass.compile
     out = Sass.compile(File.join(GEM_ROOT, "lib/railsfooter/scss/application.scss"),
-                       style: :compressed, silence_deprecations: %w[import])
+                       style: :compressed,
+                       silence_deprecations: %w[import])
     File.write(File.join(GEM_ROOT, "app/assets/stylesheets/railsfooter/railsfooter.css"), out.css)
   end
+
 end
 
 namespace :footer do

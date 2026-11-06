@@ -7,19 +7,21 @@
   <div class="announcement-banner"></div>
 
   <div class="mobile-flip">
-    <nav class="top-nav navbar navbar-expand-md" data-bs-theme="light">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <nav class="top-nav" aria-label="Emory Libraries header navigation menu">
+      <button class="nav-toggle" type="button" aria-controls="EULnavmenu" aria-expanded="false" aria-label="menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+        </svg>
       </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <%= render "railsfooter/header_navlinks" %>
+      <div class="nav-menu" id="EULnavmenu">
+        <%= render "railsfooter/header_navlinks" %>
       </div>
     </nav>
 
     <%# the following bottom-left=logo-section part is a permanent part of the template %>
     <div class="shield-branding">
       <div class="emory-shield-logo">
-        <a href="https://emory.edu" target="_blank" rel="noopener noreferrer" aria-label="Emory University Shield Logo links to Home" >
+        <a href="https://emory.edu" target="_blank" rel="noopener noreferrer" aria-label="Emory University Shield Logo link opens University home page at emory.edu in a new tab" >
           <svg width="88.8833" height="96.2167" viewBox="30 40 106 114" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
             <path d="M30.1772 32.7704L34.6742 27.9923H144.43C144.43 41.2023 146.397 60.8767 143.024 81.5349C137.262 117.23 115.48 140.277 86.5304 153.628C31.8635 128.332 29.615 76.1947 30.0366 42.6076C30.0366 40.4996 30.1772 36.1432 30.1772 32.7704Z" fill="white"/>
             <path d="M86.9356 139.048C38.4669 116.599 44.2233 66.518 44.3384 43.1471L130.108 43.2622C129.993 66.6331 135.404 116.714 86.9356 139.048ZM44.2233 39.3479L40.5392 43.2622C40.5392 46.0253 40.4241 49.5943 40.4241 51.3212C40.0787 78.8367 41.9207 121.549 86.7054 142.272C110.422 131.335 128.266 112.454 132.987 83.2115C135.75 66.2878 134.138 50.1699 134.138 39.3479L44.2233 39.3479Z" fill="#004990"/>
@@ -50,5 +52,5 @@
   </div>
 
   <%# having the hero within the header puts it on every page. other option is to move it to rendering from the home page. %>
-  <%= render "shared/hero" %>
+  <%#= render "shared/hero" %>
 </header>

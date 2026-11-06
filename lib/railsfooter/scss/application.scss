@@ -1,14 +1,11 @@
-// 1. Variable overrides FIRST. Bootstrap defines its variables with !default,
-//    meaning "only set this if it isn't already set", so your values
-//    have to exist before Bootstrap is imported.
-
-// 2. Bootstrap itself. This works because the Rake task will tell Sass
-//    where Bootstrap's files live (the load_paths option).
-// @import "bootstrap";
-
-// 3. Your partials LAST, so they can use Bootstrap's variables and mixins,
-//    and so your rules come after Bootstrap's in the final CSS and win ties.
+// ---- YOUR variables first ------------------------------------------
+// colors.scss only defines variables (no CSS output), so importing it
+// first is free. It has to come BEFORE Bootstrap's variables if you want
+// Bootstrap to use your colors (see section 3).
 @import "colors.scss";
+
+// ---- Your partials LAST ---------------------------------------------
 @import "fonts.scss";
+@import "layouts.scss";
 @import "footer.scss";
 @import "header.scss";

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+// Emory Brand Guideline fonts
+$emory-serif: "Crimson Pro", serif; // primary
+$emory-sans: "Open Sans", sans-serif; // secondary
+// EBG font weights
+$serif-xlight: 200; //for most titles, headings, and body copy (except digital!)
+$serif-regular: 400; // for <= 11pt text
+$sans-regular: 400; // for on digital platforms, use instead of CP for long blocks of text
+$sans-semibold: 600; // for legal copy
+$sans-bold: 700; // for eyebrows and titles in body copy
+
+//  colors
+//  Emory University new brand guidline colors (as of 2026)
+// primary palette
+$emory-blue: #002f6c;
+$emory-yellow: #f2a900;
+$dogwood-white: #f6f6f6;
+$waterhub-blue: #0033a0;
+//  secondary palette
+$eagle-blue: #0c2640;
+$scepter-gold: #b58500;
+$candler-lake-blue: #007dba;
+$wise-heart-red: #d14124;
+$lullwater-green: #00482b;
+$dusk-plum: #535486;
+$marble-pink: #e9cdd0;
+$wisteria-lavender: #c8b8f1;
+$spring-yellow: #ecdd31;
+$oxford-farm-green: #778921;
+//  neutrals
+$emory-blue-10: #e4e7ef;
+$emory-yellow-10: #fef6e6;
+$waterhub-blue-10: #e7e7f5;

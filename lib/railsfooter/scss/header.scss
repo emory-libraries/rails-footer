@@ -2,38 +2,63 @@
 @import "fonts.scss";
 
 header.emory-libraries-header {
+//   a:focus-visible, .nav-toggle:focus-visible {
+//   outline: $focus-ring-color;
+//   outline-offset: 2px;
+// }
   nav.top-nav {
     border-bottom: 1px solid $base-slate;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 0.8625rem;
-    div.collapse {
-          justify-content: space-between;
-        }
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    .nav-menu {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      justify-content: space-between;
+    }
+    // div.collapse {
+    //       justify-content: space-between;
+    //     }
     ul {
+      list-style-type: none; 
       display: flex;
       margin-block: 0.5rem;
       padding-inline: 2rem;
-      :not(:last-child)::after {
-        content: "|";
-        color: $light-slate;
-        padding-inline: .25rem;
+      li {
+        padding-inline: .5rem;
+      }
+      :not(:last-child) {
+        // content: "|";
+        // content: "|" / "";
+        // color: $light-slate;
+        border-right: 1px solid $light-slate;
       }
     }
-    a {
-      color: $dark-blue;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+    // a {
+    //   text-decoration: none;
+    //   color: $bright-blue;
+    //   &:hover {
+    //     color: $alt-bright-blue;
+    //     text-decoration: underline;
+    //   }
+    // }
     ul.top-nav-right {
       margin-right: 1rem;
     }
-    button.navbar-toggler {
+    .nav-toggle {
+      display: none;
       color: $dark-blue;
+      background: none;
       border: none;
+      padding: 0.25rem 0.5rem;
+      cursor: pointer;
     }
   }
   div.shield-branding {
@@ -54,7 +79,7 @@ header.emory-libraries-header {
       span.EUni {
         text-transform: uppercase;
         font-size: 1.125rem;
-        color: $scepter-gold;
+        color: $gold-metallic;
       }
       span.ELib {
         color: $dark-blue;
@@ -64,8 +89,9 @@ header.emory-libraries-header {
   }
 }
 
-@media (max-width: 767px) { /* Phone/Tablet Screen */
+@media (max-width: 767.98px) { /* getting very granular with the max-width to match bootstrap-md/ for hd screens. */
   header.emory-libraries-header {
+
     div.mobile-flip {
       display: flex;
       flex-direction: row-reverse;
@@ -73,9 +99,37 @@ header.emory-libraries-header {
       nav.top-nav {
         border-bottom: none;
         margin-inline: 1rem;
+        justify-content: flex-end;
+        width: 85%;
+        .nav-menu {
+          flex-basis: 100%;
+          flex-direction: column;
+          align-items: flex-end;
+          ul {
+            align-items: flex-end;
+            flex-direction: column;
+            padding-inline: 0;
+            margin: 0;
+            width: 100%;
+            li {
+              padding: .5rem;
+              border-right: none;
+              border-bottom: 1px solid $light-slate;
+              width: 100%;
+              text-align: end;
+            }
+            &.top-nav-right {
+              margin-right: 0;
+              :last-child {
+                border-bottom: none;
+              }
+            }
+          }
+          }
+        }
       }
       div.shield-branding {
-        margin-top: .5rem;
+        margin-top: 1.5rem;
         margin-inline: 1rem;
         div.emory-shield-logo {
           margin-bottom: -1rem;
@@ -86,20 +140,27 @@ header.emory-libraries-header {
           }
         }
         div.logo-words {
-          span.EUni {
-            font-size: .875rem;
-          }
-          span.ELib {
-            font-size: 1rem;
-          }
+          display: none;
         }
+      }
+      // progressive-enhancement part: these rules apply ONLY when the script has added .js-enabled. If the JS never loads, none of them match, so the menu simply stays visible.
+      &.js-enabled nav.top-nav {
+        .nav-toggle { display: inline-flex; }
+        .nav-menu:not(.is-open) { display: none; }
       }
     }
   }
-}
+
 
 @media (max-width: 999px) {
   header.emory-libraries-header {
-
+    div.logo-words {
+      span.EUni {
+        font-size: .875rem;
+      }
+      span.ELib {
+        font-size: 1rem;
+      }
+    }
   }
 }

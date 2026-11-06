@@ -1,0 +1,16 @@
+@import 'colors.scss';
+@import 'fonts.scss';
+
+a {
+  text-decoration: none;
+  color: $bright-blue;
+  &:hover {
+    color: $alt-bright-blue;
+    text-decoration: underline;
+    transition: all 0.25s ease;
+  }
+}
+:focus-visible {
+  outline: $focus-ring-color;
+  outline-offset: 2px;
+}
